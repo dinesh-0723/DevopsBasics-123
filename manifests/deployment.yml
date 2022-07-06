@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dineshdevopsbasics 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dineshdevopsbasics
+  template:
+    metadata:
+      labels:
+        app: dineshdevopsbasics 
+    spec:
+      containers:
+        - name: dineshdevopsbasics 
+          image: pocreg1.azurecr.io/dineshdevopsbasics
+          ports:
+          - containerPort: 80
